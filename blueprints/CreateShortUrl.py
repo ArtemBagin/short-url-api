@@ -24,7 +24,7 @@ def CreateShortUrl():
     params = parser.parse_args()
 
     if not params["url"]:
-        return json.dumps({"error":"Not found param 'url'"}),500
+        return json.dumps({"error":"Not found argument 'url'"}),500
 
     ShortCode = CreateCode()
     ShortUrl = f"{host}/s/{ShortCode}"
