@@ -26,10 +26,10 @@ def CreateShortUrl():
     if not params["url"]:
         return json.dumps({"error":"Not found param 'url'"}),500
 
-    ShotCode = CreateCode()
-    ShortUrl = f"{host}/s/{ShotCode}"
+    ShortCode = CreateCode()
+    ShortUrl = f"{host}/s/{ShortCode}"
 
-    new_url = ShortUrls(params["url"],ShortUrl,ShotCode)
+    new_url = ShortUrls(params["url"],ShortUrl,ShortCode)
     db.session.add(new_url)
     db.session.commit()
 
