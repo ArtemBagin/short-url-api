@@ -27,7 +27,7 @@ def CreateShortUrl():
         return json.dumps({"error":"Not found param 'url'"}),500
 
     ShotCode = CreateCode()
-    ShortUrl = host + ShotCode
+    ShortUrl = f"{host}/s}" + ShotCode
 
     new_url = ShortUrls(params["url"],ShortUrl,ShotCode)
     db.session.add(new_url)
