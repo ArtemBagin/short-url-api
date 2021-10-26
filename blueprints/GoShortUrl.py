@@ -7,9 +7,9 @@ GoShortUrlRouter = Blueprint('GoShortUrl',__name__)
 
 @GoShortUrlRouter.get('/s/<string:ShotCode>')
 def GoShortUrl(ShotCode:str):
-	url = ShortUrls.query.filter_by(ShotCode = ShotCode)
-	if url.all():
-		return redirect(url.one().OriginalUrl)
-	else:
-		return json.dumps({"error":"Page not found"}),404
+    url = ShortUrls.query.filter_by(ShotCode = ShotCode)
+    if url.all():
+        return redirect(url.one().OriginalUrl)
+    else:
+        return json.dumps({"error":"Page not found"}),404
 
