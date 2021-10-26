@@ -9,7 +9,6 @@ import json
 CreateShortUrlRouter = Blueprint('CreateShortUrl',__name__)
 
 
-
 def CreateCode():
     ShotCode = ''
     while ShortUrls.query.filter_by(ShotCode = ShotCode).all() or ShotCode == '':
