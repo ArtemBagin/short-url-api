@@ -1,2 +1,2 @@
-host = 'http://localhost:80/s/'
+host = 'http://localhost:5000/s/'
 sqlite_path = 'sqlite:///data.db'
