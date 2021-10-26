@@ -10,10 +10,10 @@ CreateShortUrlRouter = Blueprint('CreateShortUrl',__name__)
 
 
 def CreateCode():
-    ShotCode = ''
-    while ShortUrls.query.filter_by(ShotCode = ShotCode).all() or ShotCode == '':
-        ShotCode = "".join(choice(string.ascii_letters) for _ in range(randint(1,6)))
-    return ShotCode
+    ShortCode = ''
+    while ShortUrls.query.filter_by(ShortCode = ShortCode).all() or ShortCode == '':
+        ShortCode = "".join(choice(string.ascii_letters) for _ in range(randint(1,6)))
+    return ShortCode
 
 
 @CreateShortUrlRouter.post('/create')
