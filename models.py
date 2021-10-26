@@ -10,3 +10,5 @@ class ShortUrls(db.Model):
         self.OriginalUrl = OriginalUrl
         self.ShotUrl = ShotUrl
         self.ShotCode = ShotCode
+
+
