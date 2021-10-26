@@ -29,8 +29,8 @@ def CreateShortUrl():
     ShortCode = CreateCode()
     ShortUrl = f"{host}/s/{ShortCode}"
 
-    new_url = ShortUrls(params["url"],ShortUrl,ShortCode)
-    db.session.add(new_url)
+    NewUrl = ShortUrls(params["url"],ShortUrl,ShortCode)
+    db.session.add(NewUrl)
     db.session.commit()
 
     return json.dumps({"ShortUrl":ShortUrl}),200
