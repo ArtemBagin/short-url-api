@@ -5,9 +5,9 @@ import json
 GoShortUrlRouter = Blueprint('GoShortUrl',__name__)
 
 
-@GoShortUrlRouter.get('/s/<string:ShotCode>')
-def GoShortUrl(ShotCode:str):
-    url = ShortUrls.query.filter_by(ShotCode = ShotCode)
+@GoShortUrlRouter.get('/s/<string:ShortCode>')
+def GoShortUrl(ShortCode:str):
+    url = ShortUrls.query.filter_by(ShortCode = ShortCode)
     if url.all():
         return redirect(url.one().OriginalUrl)
     else:
