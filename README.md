@@ -4,21 +4,21 @@
 
 ## Методы api
 
-- /create [POST]
+`/create [POST]`
 >Создаёт сокращённую ссылку
 
 >Принимает на вход 1 обязательный параметр - `url`
 
 >Возвращает исходный url, сокращённый url и ShortCode 
 
-- /s/{ShortCode}/info [GET] 
+`/s/{ShortCode}/info [GET]`
 >Возвращает информацию о сокращённой ссылке
 >(ShotCode, кол-во переходов, исходный URL) 
 
-- /s/{ShortCode} [DELETE] 
+`/s/{ShortCode} [DELETE]`
 >Удаляет скоращённую ссылку по её ШортКоду
 
-- /s/{ShortCode} [GET] 
+`/s/{ShortCode} [GET]`
 >Переход по сокращённой ссылке
 
 ## База данных 
