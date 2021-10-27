@@ -1,7 +1,5 @@
-from blueprints import CreateShortUrl
-from blueprints import DeliteShortUrl
-from blueprints import GetUrlInfo
-from blueprints import GoShortUrl
+from blueprints import (CreateShortUrl, DeliteShortUrl,
+                        GetUrlInfo, GoShortUrl) 
 
 routers = [
     CreateShortUrl.router,
