@@ -27,7 +27,7 @@ def CreateShortUrl():
 
     ShortCode = CreateCode()
     ShortUrl = f"{host}/s/{ShortCode}"
-
+    print(ShortUrl)
     NewUrl = ShortUrls(params["url"],ShortUrl,ShortCode)
     db.session.add(NewUrl)
     db.session.commit()
