@@ -12,6 +12,5 @@ def GoShortUrl(ShortCode:str):
 		url.one().Transition += 1
 		db.session.commit()
 		return redirect(url.one().OriginalUrl)
-	else:
-		return json.dumps({"error":"Page not found"}),404
+	return json.dumps({"error":"Page not found"}),404
 

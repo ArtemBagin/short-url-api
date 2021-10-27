@@ -12,6 +12,5 @@ def DeliteShortUrl(ShortCode:str):
 		url.delete()
 		db.session.commit()
 		return json.dumps({"message":"link has been deleted"}),200
-	else:
-		return json.dumps({"error":"Page not found"}),404
+	return json.dumps({"error":"Page not found"}),404
 

@@ -12,6 +12,5 @@ def GetUrlInfo(ShortCode:str):
 		UrlInfo = url.one().__dict__
 		UrlInfo.pop('_sa_instance_state')
 		return json.dumps(UrlInfo),200
-	else:
-		return json.dumps({"error":"Page not found"}),404
+	return json.dumps({"error":"Page not found"}),404
 
