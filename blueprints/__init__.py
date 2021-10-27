@@ -4,9 +4,9 @@ import blueprints.GetUrlInfo
 import blueprints.GoShortUrl
 
 routers = [
-CreateShortUrl.router,
-DeliteShortUrl.router,
-GetUrlInfo.router,
-GoShortUrl.router,
+    CreateShortUrl.router,
+    DeliteShortUrl.router,
+    GetUrlInfo.router,
+    GoShortUrl.router,
 ]
 
