@@ -12,4 +12,4 @@ class ShortUrls(db.Model):
         self.ShortUrl = ShortUrl
         self.ShortCode = ShortCode
 
-# db.create_all()
+

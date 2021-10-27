@@ -14,3 +14,4 @@ def GoShortUrl(ShortCode:str):
 		return redirect(url.one().OriginalUrl)
 	return json.dumps({"error":"Page not found"}),404
 
+

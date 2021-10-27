@@ -9,3 +9,4 @@ DeliteShortUrl.router,
 GetUrlInfo.router,
 GoShortUrl.router,
 ]
+
