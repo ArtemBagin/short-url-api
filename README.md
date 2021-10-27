@@ -2,7 +2,6 @@
 
 - API позволяющий сокращать любые ссылки
 
-- API поддерживает только один MIME-тип: application/json
 ## Методы api
 
 - /create [POST]
