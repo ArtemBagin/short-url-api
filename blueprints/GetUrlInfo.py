@@ -1,11 +1,11 @@
 from flask import Blueprint
-from models import ShortUrls,db
+from models import ShortUrls
 import json
 
-GetUrlInfoRouter = Blueprint('GetUrlInfo',__name__)
+router = Blueprint('GetUrlInfo',__name__)
 
 
-@GetUrlInfoRouter.get('/s/<string:ShortCode>/info')
+@router.get('/s/<string:ShortCode>/info')
 def GetUrlInfo(ShortCode:str):
 	url = ShortUrls.query.filter_by(ShortCode = ShortCode)
 	if url.all():

@@ -1,4 +1,4 @@
-from flask_restful import Resource,reqparse
+from flask_restful import reqparse
 from random import choice,randint
 from models import db,ShortUrls
 from flask import Blueprint
@@ -6,7 +6,7 @@ from config import host
 import string
 import json
 
-CreateShortUrlRouter = Blueprint('CreateShortUrl',__name__)
+router = Blueprint('CreateShortUrl',__name__)
 
 
 def CreateCode():
@@ -16,7 +16,7 @@ def CreateCode():
     return ShortCode
 
 
-@CreateShortUrlRouter.post('/create')
+@router.post('/create')
 def CreateShortUrl():
     parser = reqparse.RequestParser()
     parser.add_argument("url",type = str)
