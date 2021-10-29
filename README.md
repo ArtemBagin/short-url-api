@@ -11,14 +11,14 @@
 
 >Возвращает сокращённый url 
 
-`/s/{ShortCode}/info [GET]`
+`/{ShortCode}/info [GET]`
 >Возвращает информацию о сокращённой ссылке
 >(ShotCode, кол-во переходов, исходный URL) 
 
-`/s/{ShortCode} [DELETE]`
+`/{ShortCode} [DELETE]`
 >Удаляет скоращённую ссылку по её ШортКоду
 
-`/s/{ShortCode} [GET]`
+`/{ShortCode} [GET]`
 >Переход по сокращённой ссылке
 
 ## База данных 
