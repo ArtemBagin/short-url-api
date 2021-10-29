@@ -5,6 +5,7 @@ from flask import Blueprint
 from config import host
 import string
 import json
+import re
 
 router = Blueprint('CreateShortUrl',__name__)
 
@@ -25,6 +26,9 @@ def CreateShortUrl():
     if not params["url"]:
         return json.dumps({"error":"Not found argument 'url'"}),500
 
+    if not re.match(r'^(ftp|http|https):\/\/[^ "]+$',params["url"]):
+        return json.dumps({"error":"incorrect link format"}),500
+    
     ShortCode = CreateCode()
     ShortUrl = f"{host}/{ShortCode}"
 
