@@ -5,7 +5,7 @@ import json
 router = Blueprint('GetUrlInfo',__name__)
 
 
-@router.get('/s/<string:ShortCode>/info')
+@router.get('/<string:ShortCode>/info')
 def GetUrlInfo(ShortCode:str):
 	url = ShortUrls.query.filter_by(ShortCode = ShortCode)
 	if url.all():

@@ -5,7 +5,7 @@ import json
 router = Blueprint('DeliteShortUrl',__name__)
 
 
-@router.delete('/s/<string:ShortCode>')
+@router.delete('/<string:ShortCode>')
 def DeliteShortUrl(ShortCode:str):
 	url = ShortUrls.query.filter_by(ShortCode = ShortCode)
 	if url.all():
